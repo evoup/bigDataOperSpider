@@ -9,6 +9,6 @@ class DafontSpider(scrapy.Spider):
 
     def parse(self, response):
         print "--------------------------------------------------"
-        for href in response.css('a.dl').extract():
-            print "hit"
+        for href in response.css('a.dl::attr(href)').extract():
+            print "[hit:" + href + "]"
         pass
