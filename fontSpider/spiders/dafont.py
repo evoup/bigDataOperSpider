@@ -8,4 +8,7 @@ class DafontSpider(scrapy.Spider):
     start_urls = ['http://dafont.com/']
 
     def parse(self, response):
+        print "--------------------------------------------------"
+        for href in response.css('a.dl').extract():
+            print "hit"
         pass
