@@ -11,4 +11,8 @@ import scrapy
 class FontspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    #title = Field()
+    next_page = scrapy.Field()
+    url = scrapy.Field()
+    files = scrapy.Field()
     pass

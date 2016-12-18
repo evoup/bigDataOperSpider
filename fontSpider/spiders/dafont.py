@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+from fontSpider.items import FontspiderItem
 
 
 class DafontSpider(scrapy.Spider):
@@ -11,6 +12,10 @@ class DafontSpider(scrapy.Spider):
         print "--------------------------------------------------"
         for href in response.css('a.dl::attr(href)').extract():
             print "[hit:" + href + "]"
+            yield FontspiderItem(
+                #title=link.xpath('text()').extract(),
+                url=[href]
+            )
             #超链接的title为Keyboard shortcut: Right arrow
         next_page = response.css("a[title='Keyboard shortcut: Right arrow']::attr(href)").extract_first()
         print "next_page" + next_page
