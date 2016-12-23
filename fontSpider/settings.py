@@ -93,6 +93,6 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-FILES_STORE = "/tmp/"
+FILES_STORE = "/home/hadoop/project/hdfs/tmp/"
 FILES_URLS_FIELD = "url"
 FILES_RESULT_FIELD = "files"
